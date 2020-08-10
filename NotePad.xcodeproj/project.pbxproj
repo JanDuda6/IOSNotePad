@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		C50E4D9824CF25F6000D9851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4D9724CF25F6000D9851 /* AppDelegate.swift */; };
 		C50E4D9A24CF25F6000D9851 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4D9924CF25F6000D9851 /* SceneDelegate.swift */; };
-		C50E4D9C24CF25F6000D9851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4D9B24CF25F6000D9851 /* ViewController.swift */; };
+		C50E4D9C24CF25F6000D9851 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4D9B24CF25F6000D9851 /* NotesViewController.swift */; };
 		C50E4D9F24CF25F6000D9851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50E4D9D24CF25F6000D9851 /* Main.storyboard */; };
 		C50E4DA224CF25F6000D9851 /* NotePad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DA024CF25F6000D9851 /* NotePad.xcdatamodeld */; };
 		C50E4DA424CF25F9000D9851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50E4DA324CF25F9000D9851 /* Assets.xcassets */; };
 		C50E4DA724CF25F9000D9851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50E4DA524CF25F9000D9851 /* LaunchScreen.storyboard */; };
+		C50E4DAF24CF2685000D9851 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DAE24CF2685000D9851 /* Constants.swift */; };
+		C50E4DB124CF34A7000D9851 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DB024CF34A7000D9851 /* DetailsViewController.swift */; };
+		C50E4DB624D09704000D9851 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DB524D09704000D9851 /* AddNoteViewController.swift */; };
+		C50E4DB824D09805000D9851 /* CRUDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DB724D09805000D9851 /* CRUDService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C50E4D9424CF25F6000D9851 /* NotePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50E4D9724CF25F6000D9851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C50E4D9924CF25F6000D9851 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C50E4D9B24CF25F6000D9851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C50E4D9B24CF25F6000D9851 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		C50E4D9E24CF25F6000D9851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C50E4DA124CF25F6000D9851 /* NotePad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotePad.xcdatamodel; sourceTree = "<group>"; };
 		C50E4DA324CF25F9000D9851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50E4DA624CF25F9000D9851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C50E4DA824CF25F9000D9851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C50E4DAE24CF2685000D9851 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C50E4DB024CF34A7000D9851 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C50E4DB524D09704000D9851 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		C50E4DB724D09805000D9851 /* CRUDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,52 @@
 		C50E4D9624CF25F6000D9851 /* NotePad */ = {
 			isa = PBXGroup;
 			children = (
+				C50E4DB924D09B15000D9851 /* Service */,
+				C50E4DB424CF38F2000D9851 /* Controllers */,
+				C50E4DB324CF38E9000D9851 /* Model */,
+				C50E4DB224CF38D5000D9851 /* Views */,
 				C50E4D9724CF25F6000D9851 /* AppDelegate.swift */,
 				C50E4D9924CF25F6000D9851 /* SceneDelegate.swift */,
-				C50E4D9B24CF25F6000D9851 /* ViewController.swift */,
-				C50E4D9D24CF25F6000D9851 /* Main.storyboard */,
 				C50E4DA324CF25F9000D9851 /* Assets.xcassets */,
 				C50E4DA524CF25F9000D9851 /* LaunchScreen.storyboard */,
 				C50E4DA824CF25F9000D9851 /* Info.plist */,
-				C50E4DA024CF25F6000D9851 /* NotePad.xcdatamodeld */,
+				C50E4DAE24CF2685000D9851 /* Constants.swift */,
 			);
 			path = NotePad;
+			sourceTree = "<group>";
+		};
+		C50E4DB224CF38D5000D9851 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C50E4D9D24CF25F6000D9851 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C50E4DB324CF38E9000D9851 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C50E4DA024CF25F6000D9851 /* NotePad.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C50E4DB424CF38F2000D9851 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C50E4D9B24CF25F6000D9851 /* NotesViewController.swift */,
+				C50E4DB024CF34A7000D9851 /* DetailsViewController.swift */,
+				C50E4DB524D09704000D9851 /* AddNoteViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C50E4DB924D09B15000D9851 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C50E4DB724D09805000D9851 /* CRUDService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C50E4D9C24CF25F6000D9851 /* ViewController.swift in Sources */,
+				C50E4DB624D09704000D9851 /* AddNoteViewController.swift in Sources */,
+				C50E4DB824D09805000D9851 /* CRUDService.swift in Sources */,
+				C50E4DAF24CF2685000D9851 /* Constants.swift in Sources */,
+				C50E4D9C24CF25F6000D9851 /* NotesViewController.swift in Sources */,
 				C50E4D9824CF25F6000D9851 /* AppDelegate.swift in Sources */,
 				C50E4D9A24CF25F6000D9851 /* SceneDelegate.swift in Sources */,
 				C50E4DA224CF25F6000D9851 /* NotePad.xcdatamodeld in Sources */,
+				C50E4DB124CF34A7000D9851 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
