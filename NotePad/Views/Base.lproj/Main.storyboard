@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q3e-tH-ADJ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,10 +24,10 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesVC" id="Ylf-ij-z75">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ylf-ij-z75" id="b12-AU-fng">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
@@ -72,38 +72,52 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CPN-6R-PBq">
-                                <rect key="frame" x="20" y="246" width="374" height="634"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CPN-6R-PBq">
+                                <rect key="frame" x="20" y="228" width="374" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcy-e4-YvP">
-                                <rect key="frame" x="20" y="155" width="374" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcy-e4-YvP">
+                                <rect key="frame" x="20" y="139" width="374" height="41"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="yEI-WK-lJp"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgh-el-Ihk">
-                                <rect key="frame" x="29" y="112" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgh-el-Ihk">
+                                <rect key="frame" x="20" y="110" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x01-n6-Wg3">
-                                <rect key="frame" x="29" y="217" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x01-n6-Wg3">
+                                <rect key="frame" x="20" y="192" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CPN-6R-PBq" firstAttribute="leading" secondItem="bi9-nR-3N8" secondAttribute="leading" constant="20" id="2O5-oL-V6Q"/>
+                            <constraint firstItem="x01-n6-Wg3" firstAttribute="leading" secondItem="bi9-nR-3N8" secondAttribute="leading" constant="20" id="AAH-Cj-S4C"/>
+                            <constraint firstItem="zcy-e4-YvP" firstAttribute="top" secondItem="vgh-el-Ihk" secondAttribute="bottom" constant="8" id="GdT-9M-PsQ"/>
+                            <constraint firstItem="x01-n6-Wg3" firstAttribute="top" secondItem="zcy-e4-YvP" secondAttribute="bottom" constant="12" id="R3W-g4-FXm"/>
+                            <constraint firstItem="CPN-6R-PBq" firstAttribute="top" secondItem="x01-n6-Wg3" secondAttribute="bottom" constant="15" id="XiG-8m-vgG"/>
+                            <constraint firstItem="vgh-el-Ihk" firstAttribute="leading" secondItem="bi9-nR-3N8" secondAttribute="leading" constant="20" id="ZEZ-Ng-c9q"/>
+                            <constraint firstItem="zcy-e4-YvP" firstAttribute="leading" secondItem="bi9-nR-3N8" secondAttribute="leading" constant="20" id="eWY-7x-FGQ"/>
+                            <constraint firstItem="bi9-nR-3N8" firstAttribute="trailing" secondItem="CPN-6R-PBq" secondAttribute="trailing" constant="20" id="hdR-0G-6hb"/>
+                            <constraint firstAttribute="bottom" secondItem="CPN-6R-PBq" secondAttribute="bottom" id="mIh-ld-vpq"/>
+                            <constraint firstItem="vgh-el-Ihk" firstAttribute="top" secondItem="bi9-nR-3N8" secondAttribute="top" constant="22" id="pkR-l8-L2u"/>
+                            <constraint firstItem="zcy-e4-YvP" firstAttribute="trailing" secondItem="vgh-el-Ihk" secondAttribute="trailing" id="qJ5-nT-ee7"/>
+                            <constraint firstItem="bi9-nR-3N8" firstAttribute="trailing" secondItem="x01-n6-Wg3" secondAttribute="trailing" constant="20" id="uA8-xd-Izq"/>
+                            <constraint firstItem="bi9-nR-3N8" firstAttribute="trailing" secondItem="vgh-el-Ihk" secondAttribute="trailing" constant="20" id="wub-cd-LVz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bi9-nR-3N8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a note" id="Ekl-b9-xbQ">
@@ -130,40 +144,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qQO-7E-u4Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qQO-7E-u4Z">
                                 <rect key="frame" x="20" y="139" width="374" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="6Qx-sV-hZb"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bP9-fe-oCt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bP9-fe-oCt">
                                 <rect key="frame" x="20" y="228" width="374" height="634"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-lA-MAM">
-                                <rect key="frame" x="20" y="110" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-lA-MAM">
+                                <rect key="frame" x="20" y="110" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POy-Ps-80J">
-                                <rect key="frame" x="20" y="192" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POy-Ps-80J">
+                                <rect key="frame" x="20" y="192" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2c3-up-BNI" firstAttribute="trailing" secondItem="a5W-lA-MAM" secondAttribute="trailing" constant="20" id="7DZ-o0-kL7"/>
+                            <constraint firstItem="bP9-fe-oCt" firstAttribute="bottom" secondItem="2c3-up-BNI" secondAttribute="bottom" id="9iU-80-i6R"/>
+                            <constraint firstItem="a5W-lA-MAM" firstAttribute="leading" secondItem="2c3-up-BNI" secondAttribute="leading" constant="20" id="ALu-mj-LHX"/>
+                            <constraint firstItem="POy-Ps-80J" firstAttribute="leading" secondItem="2c3-up-BNI" secondAttribute="leading" constant="20" id="B02-Q7-UMU"/>
+                            <constraint firstItem="POy-Ps-80J" firstAttribute="top" secondItem="qQO-7E-u4Z" secondAttribute="bottom" constant="12" id="Gkb-YC-UhJ"/>
+                            <constraint firstItem="qQO-7E-u4Z" firstAttribute="top" secondItem="a5W-lA-MAM" secondAttribute="bottom" constant="8" id="Rpx-J6-56y"/>
+                            <constraint firstItem="2c3-up-BNI" firstAttribute="trailing" secondItem="POy-Ps-80J" secondAttribute="trailing" constant="20" id="Srz-Oi-K5Z"/>
+                            <constraint firstItem="2c3-up-BNI" firstAttribute="trailing" secondItem="qQO-7E-u4Z" secondAttribute="trailing" constant="20" id="bU7-AX-XkO"/>
+                            <constraint firstItem="a5W-lA-MAM" firstAttribute="top" secondItem="2c3-up-BNI" secondAttribute="top" constant="22" id="mLc-Ll-HHj"/>
+                            <constraint firstItem="2c3-up-BNI" firstAttribute="trailing" secondItem="bP9-fe-oCt" secondAttribute="trailing" constant="20" id="mqD-Ru-J8D"/>
+                            <constraint firstItem="bP9-fe-oCt" firstAttribute="top" secondItem="POy-Ps-80J" secondAttribute="bottom" constant="15" id="uUg-uC-OxB"/>
+                            <constraint firstItem="bP9-fe-oCt" firstAttribute="leading" secondItem="2c3-up-BNI" secondAttribute="leading" constant="20" id="xDk-pD-QAK"/>
+                            <constraint firstItem="qQO-7E-u4Z" firstAttribute="leading" secondItem="2c3-up-BNI" secondAttribute="leading" constant="20" id="xd8-ze-ONJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2c3-up-BNI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Note details" id="9i3-qX-aNt">

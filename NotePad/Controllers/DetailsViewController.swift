@@ -12,9 +12,9 @@ class DetailsViewController: UIViewController, UITextViewDelegate, UIGestureReco
 
     let crudService = CRUDService()
 
-    @IBOutlet weak var titleTextView: UITextView!
-    @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var updateButton: UIBarButtonItem!
+    @IBOutlet weak private var titleTextView: UITextView!
+    @IBOutlet weak private var contentTextView: UITextView!
+    @IBOutlet weak private var updateButton: UIBarButtonItem!
 
     var note: Note?
 
@@ -31,7 +31,9 @@ class DetailsViewController: UIViewController, UITextViewDelegate, UIGestureReco
         note?.title = titleTextView.text
         note?.content = contentTextView.text
         note?.creationDate =  Date()
-        crudService.saveNote()
+        DispatchQueue.global().async {
+            self.crudService.saveNote()
+        }
         updateButton.isEnabled = false
         titleTextView.isEditable = false
         contentTextView.isEditable = false

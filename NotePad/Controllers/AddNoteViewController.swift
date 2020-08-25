@@ -13,8 +13,8 @@ class AddNoteViewController: UIViewController, UITextViewDelegate {
 
     let crudService = CRUDService()
 
-    @IBOutlet weak var titleLabel: UITextView!
-    @IBOutlet weak var contentLabel: UITextView!
+    @IBOutlet weak private var titleLabel: UITextView!
+    @IBOutlet weak private var contentLabel: UITextView!
 
     override func loadView() {
         super.loadView()
@@ -25,7 +25,9 @@ class AddNoteViewController: UIViewController, UITextViewDelegate {
         newNote.title = titleLabel.text.isEmpty ? "Title" : titleLabel.text
         newNote.content = contentLabel.text.isEmpty ? "Content is empty" : contentLabel.text
         newNote.creationDate =  Date()
-        crudService.saveNote()
+        DispatchQueue.global().async {
+            self.crudService.saveNote()
+        }
         self.navigationController?.popViewController(animated: true)
     }
 }

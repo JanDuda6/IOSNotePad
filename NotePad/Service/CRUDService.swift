@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 struct CRUDService {
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = CoreDataStack.sharedManager.persistentContainer.viewContext
 
     func saveNote() {
         do {
