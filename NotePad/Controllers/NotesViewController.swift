@@ -12,8 +12,9 @@ import CoreData
 class NotesViewController: UITableViewController {
 
     let crudService = CRUDService()
+    var formatter = DataFormatterHelper()
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak private var searchBar: UISearchBar!
     
     var notes = [Note]()
 
@@ -23,6 +24,17 @@ class NotesViewController: UITableViewController {
         notes = crudService.loadNotesFromSearch()
         tableView.reloadData()
     }
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: Constants.noteSaveSegue, sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow, let detailsVC = segue.destination as? DetailsViewController {
+            detailsVC.note = notes[indexPath.row]
+        }
+    }
+}
+//MARK: - Data Source
+extension NotesViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
@@ -31,23 +43,13 @@ class NotesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: Constants.notesCell)
         cell.textLabel?.text = notes[indexPath.row].title
-        cell.detailTextLabel?.text = dateFormatter(with: notes[indexPath.row].creationDate!)
+        cell.detailTextLabel?.text = formatter.dateFormatter(with: notes[indexPath.row].creationDate!)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.noteDetailsSegue, sender: self)
         navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow, let detailsVC = segue.destination as? DetailsViewController {
-            detailsVC.note = notes[indexPath.row]
-        }
-    }
-
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: Constants.noteSaveSegue, sender: self)
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -57,16 +59,8 @@ class NotesViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
-
-    func dateFormatter(with date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.locale = Locale(identifier: "pl_PL")
-        formatter.dateFormat = "d MMM y, HH:mm"
-        return formatter.string(from: date)
-    }
 }
-
+//MARK: - SearchBar Delegate
 extension NotesViewController: UISearchBarDelegate {
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

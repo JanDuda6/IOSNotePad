@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,9 +18,15 @@
 		C50E4DB124CF34A7000D9851 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DB024CF34A7000D9851 /* DetailsViewController.swift */; };
 		C50E4DB624D09704000D9851 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DB524D09704000D9851 /* AddNoteViewController.swift */; };
 		C50E4DB824D09805000D9851 /* CRUDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E4DB724D09805000D9851 /* CRUDService.swift */; };
+		C59C7BAB24E486C0001A3E9E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C7BAA24E486C0001A3E9E /* CoreDataStack.swift */; };
+		C59C7BAD24E490AA001A3E9E /* DataFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C7BAC24E490AA001A3E9E /* DataFormatterHelper.swift */; };
+		DAE8C98547ACEB5321C6D394 /* Pods_NotePad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDF5B51483B42771DD4A96B /* Pods_NotePad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CDF5B51483B42771DD4A96B /* Pods_NotePad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotePad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5637540405896CF86B7C9549 /* Pods-NotePad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotePad.debug.xcconfig"; path = "Target Support Files/Pods-NotePad/Pods-NotePad.debug.xcconfig"; sourceTree = "<group>"; };
+		5B115BEAA40F545E6EA58706 /* Pods-NotePad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotePad.release.xcconfig"; path = "Target Support Files/Pods-NotePad/Pods-NotePad.release.xcconfig"; sourceTree = "<group>"; };
 		C50E4D9424CF25F6000D9851 /* NotePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50E4D9724CF25F6000D9851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C50E4D9924CF25F6000D9851 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +40,8 @@
 		C50E4DB024CF34A7000D9851 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C50E4DB524D09704000D9851 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		C50E4DB724D09805000D9851 /* CRUDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDService.swift; sourceTree = "<group>"; };
+		C59C7BAA24E486C0001A3E9E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C59C7BAC24E490AA001A3E9E /* DataFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatterHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE8C98547ACEB5321C6D394 /* Pods_NotePad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AADA7F3D34058D5E7EEDA5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CDF5B51483B42771DD4A96B /* Pods_NotePad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4B1DBED461A9F1EE390DCED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5637540405896CF86B7C9549 /* Pods-NotePad.debug.xcconfig */,
+				5B115BEAA40F545E6EA58706 /* Pods-NotePad.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C50E4D8B24CF25F6000D9851 = {
 			isa = PBXGroup;
 			children = (
 				C50E4D9624CF25F6000D9851 /* NotePad */,
 				C50E4D9524CF25F6000D9851 /* Products */,
+				B4B1DBED461A9F1EE390DCED /* Pods */,
+				3AADA7F3D34058D5E7EEDA5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +104,7 @@
 				C50E4DA524CF25F9000D9851 /* LaunchScreen.storyboard */,
 				C50E4DA824CF25F9000D9851 /* Info.plist */,
 				C50E4DAE24CF2685000D9851 /* Constants.swift */,
+				C59C7BAC24E490AA001A3E9E /* DataFormatterHelper.swift */,
 			);
 			path = NotePad;
 			sourceTree = "<group>";
@@ -110,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C50E4DB724D09805000D9851 /* CRUDService.swift */,
+				C59C7BAA24E486C0001A3E9E /* CoreDataStack.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -121,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C50E4DAB24CF25F9000D9851 /* Build configuration list for PBXNativeTarget "NotePad" */;
 			buildPhases = (
+				0D436C427915ABDD97B61305 /* [CP] Check Pods Manifest.lock */,
 				C50E4D9024CF25F6000D9851 /* Sources */,
 				C50E4D9124CF25F6000D9851 /* Frameworks */,
 				C50E4D9224CF25F6000D9851 /* Resources */,
+				D65AD78FCDED589B4BB4FE1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +212,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D436C427915ABDD97B61305 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotePad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D65AD78FCDED589B4BB4FE1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotePad/Pods-NotePad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotePad/Pods-NotePad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotePad/Pods-NotePad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C50E4D9024CF25F6000D9851 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -189,8 +263,10 @@
 				C50E4DB824D09805000D9851 /* CRUDService.swift in Sources */,
 				C50E4DAF24CF2685000D9851 /* Constants.swift in Sources */,
 				C50E4D9C24CF25F6000D9851 /* NotesViewController.swift in Sources */,
+				C59C7BAD24E490AA001A3E9E /* DataFormatterHelper.swift in Sources */,
 				C50E4D9824CF25F6000D9851 /* AppDelegate.swift in Sources */,
 				C50E4D9A24CF25F6000D9851 /* SceneDelegate.swift in Sources */,
+				C59C7BAB24E486C0001A3E9E /* CoreDataStack.swift in Sources */,
 				C50E4DA224CF25F6000D9851 /* NotePad.xcdatamodeld in Sources */,
 				C50E4DB124CF34A7000D9851 /* DetailsViewController.swift in Sources */,
 			);
@@ -334,6 +410,7 @@
 		};
 		C50E4DAC24CF25F9000D9851 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5637540405896CF86B7C9549 /* Pods-NotePad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +429,7 @@
 		};
 		C50E4DAD24CF25F9000D9851 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B115BEAA40F545E6EA58706 /* Pods-NotePad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
