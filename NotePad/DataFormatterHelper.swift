@@ -10,10 +10,10 @@ import Foundation
 
 struct DataFormatterHelper {
     func dateFormatter(with date: Date) -> String {
-          let formatter = DateFormatter()
-          formatter.dateStyle = .short
-          formatter.locale = Locale(identifier: "pl_PL")
-          formatter.dateFormat = "d MMM y, HH:mm"
-          return formatter.string(from: date)
-      }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.locale = .autoupdatingCurrent
+        formatter.dateFormat = "d MMM y, HH:mm"
+        return formatter.string(from: date)
+    }
 }

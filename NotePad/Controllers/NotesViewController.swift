@@ -69,19 +69,30 @@ extension NotesViewController: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0 {
-            notes = crudService.loadNotesFromSearch()
-            tableView.reloadData()
-            DispatchQueue.main.async {
-                searchBar.resignFirstResponder()
+
+        if let value = searchBar.text?.count {
+            switch value {
+
+            case 0:
+                notes = crudService.loadNotesFromSearch()
+                tableView.reloadData()
+                DispatchQueue.main.async {
+                    searchBar.resignFirstResponder()
+                }
+
+            case 1... :
+                let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+                notes = crudService.loadNotesFromSearch(predicate: predicate)
+                tableView.reloadData()
+
+            default:
+                print("Error searchBar")
             }
         }
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-        notes = crudService.loadNotesFromSearch(predicate: predicate)
-        tableView.reloadData()
+        searchBar.endEditing(true)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
