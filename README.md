@@ -1,1 +1,1 @@
-simple notepad app for ios
+Notepad app where you can add, delete and update your notes. 
